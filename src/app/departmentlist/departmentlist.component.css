@@ -1,0 +1,23 @@
+.btn {
+  list-style-type: none;
+  
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100px;
+  margin-bottom: 10px;
+  
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+li.selected{
+  background-color: rgb(176, 194, 241);
+}
