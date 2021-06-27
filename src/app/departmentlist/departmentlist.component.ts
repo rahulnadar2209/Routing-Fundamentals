@@ -8,29 +8,29 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 })
 export class DepartmentlistComponent implements OnInit {
   public SelectedId;
-  constructor(private router:Router,private route:ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.route.paramMap.subscribe((params:ParamMap)=>{
-      let id= parseInt(params.get('id'))
-      this.SelectedId=id;
-    })
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      let id = parseInt(params.get('id'));
+      this.SelectedId = id;
+    });
   }
 
-  
-  departments=[
-    {"id":1,"dept":"Angular"},
-    {"id":2,"dept":"Node"},
-    {"id":3,"dept":"MongoDB"},
-    {"id":4,"dept":"Express"},
-    {"id":5,"dept":"SpringBoot"},
-  ]
+  departments = [
+    { id: 1, dept: 'Angular' },
+    { id: 2, dept: 'Node' },
+    { id: 3, dept: 'MongoDB' },
+    { id: 4, dept: 'Express' },
+    { id: 5, dept: 'SpringBoot' }
+  ];
 
-  onSelect(dept){
-    this.router.navigate(['/departments',dept.id])
+  onSelect(dept) {
+    // this.router.navigate(['/departments',dept.id])
+    this.router.navigate([dept.id], { relativeTo: this.route });
   }
 
-  isSelected(dept){
+  isSelected(dept) {
     return dept.id === this.SelectedId;
   }
 }
