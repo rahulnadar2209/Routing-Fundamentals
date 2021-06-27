@@ -8,15 +8,14 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { TaskService } from './task.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule,routingComponents } from './app-routing.module';
-import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
-import { DepartmentContactComponent } from './department-contact/department-contact.component';
+
 
 
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent, TaskListComponent, routingComponents, DepartmentOverviewComponent, DepartmentContactComponent ],
+  declarations: [ AppComponent, HelloComponent, TaskListComponent, routingComponents ],
   bootstrap:    [ AppComponent ],
   providers: [TaskService]
 })
