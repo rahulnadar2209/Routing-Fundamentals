@@ -1,6 +1,6 @@
 <div>
   <ul>
-    <li *ngFor="let dept of departments">
+    <li (click)="onSelect(dept)" [class.selected]="isSelected(dept)" *ngFor="let dept of departments">
 <button class="btn" >
 {{dept.id}}.{{dept.dept}}
 </button></li></ul>
